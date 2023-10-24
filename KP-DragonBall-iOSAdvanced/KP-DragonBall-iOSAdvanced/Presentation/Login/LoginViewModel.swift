@@ -8,8 +8,13 @@
 import Foundation
 
 class LoginViewModel: LoginViewControllerDelegate {
+
+    // MARK: - Properties -
+    var viewState: ((LoginViewState) -> Void)?
     
+    // MARK: - Public functions -
     func onLoginPressed(email: String?, password: String?) {
-        
+        viewState?(.loading(true))
     }
 }
+

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginViewControllerDelegate {
-    var viewState: ((LoginViewState) -> Void) { get set }
+    var viewState: ((LoginViewState) -> Void)? { get set }
     func onLoginPressed(email: String?, password: String?)
 }
 
@@ -71,26 +71,27 @@ class LoginViewController: UIViewController {
     }
     
     private func setObservers() {
-        viewModel?.viewState = { state in
+        viewModel?.viewState = { [weak self] state in
             switch state {
             case .loading(let isLoading):
-                self.loadingView.isHidden = !isLoading
+                self?.loadingView.isHidden = !isLoading
                 
             case .showErrorEmail(let error):
-                self.emailFieldError.text = error
-                self.emailFieldError.isHidden = (error == nil || error?.isEmpty == true)
+                self?.emailFieldError.text = error
+                self?.emailFieldError.isHidden = (error == nil || error?.isEmpty == true)
                 
             case .showErrorPassword(let error):
-                self.passwordFieldError.text = error
-                self.passwordFieldError.isHidden = (error == nil || error?.isEmpty == true)
+                self?.passwordFieldError.text = error
+                self?.passwordFieldError.isHidden = (error == nil || error?.isEmpty == true)
                 
             case .navigateToNext:
-                self.loadingView.isHidden = true
+                self?.loadingView.isHidden = true
                 // TODO: Navegar a la siguiente vista
             }
         }
     }
 }
+
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch FieldType(rawValue: textField.tag) {
