@@ -103,12 +103,10 @@
 			children = (
 				5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */,
 				5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */,
-				5DD06FBF2AE6F84000AC3ECB /* ViewController.swift */,
-				5DD06FC12AE6F84000AC3ECB /* Main.storyboard */,
-				5DD06FC72AE6F84100AC3ECB /* Assets.xcassets */,
-				5DD06FC92AE6F84100AC3ECB /* LaunchScreen.storyboard */,
 				5DD06FCC2AE6F84100AC3ECB /* Info.plist */,
-				5DD06FC42AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld */,
+				5DF8061E2AE808D8001CA7C9 /* Data */,
+				5DF8061D2AE808D3001CA7C9 /* Resources */,
+				5DF8061A2AE808C4001CA7C9 /* Presentation */,
 			);
 			path = "KP-DragonBall-iOSAdvanced";
 			sourceTree = "<group>";
@@ -128,6 +126,64 @@
 				5DD06FE12AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITestsLaunchTests.swift */,
 			);
 			path = "KP-DragonBall-iOSAdvancedUITests";
+			sourceTree = "<group>";
+		};
+		5DF8061A2AE808C4001CA7C9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5DD06FC12AE6F84000AC3ECB /* Main.storyboard */,
+				5DF806242AE80959001CA7C9 /* Launch */,
+				5DF806262AE8099D001CA7C9 /* Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5DF8061D2AE808D3001CA7C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DD06FC72AE6F84100AC3ECB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DF8061E2AE808D8001CA7C9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5DF806222AE8093A001CA7C9 /* Api */,
+				5DF806212AE80936001CA7C9 /* Local */,
+				5DD06FC42AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5DF806212AE80936001CA7C9 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		5DF806222AE8093A001CA7C9 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		5DF806242AE80959001CA7C9 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				5DD06FC92AE6F84100AC3ECB /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		5DF806262AE8099D001CA7C9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5DD06FBF2AE6F84000AC3ECB /* ViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
