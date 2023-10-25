@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D713EAA2AE8FCCA00B9E9B8 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D713EA92AE8FCCA00B9E9B8 /* KeychainSwift */; };
+		5D713EB12AE8FD6800B9E9B8 /* SecureDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D713EB02AE8FD6800B9E9B8 /* SecureDataProvider.swift */; };
 		5DD06FBC2AE6F84000AC3ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */; };
 		5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */; };
 		5DD06FC02AE6F84000AC3ECB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D713EB02AE8FD6800B9E9B8 /* SecureDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataProvider.swift; sourceTree = "<group>"; };
 		5DD06FB82AE6F84000AC3ECB /* KP-DragonBall-iOSAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KP-DragonBall-iOSAdvanced.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +157,6 @@
 			children = (
 				5DF806222AE8093A001CA7C9 /* Api */,
 				5DF806212AE80936001CA7C9 /* Local */,
-				5DD06FC42AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -163,6 +164,8 @@
 		5DF806212AE80936001CA7C9 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				5DD06FC42AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld */,
+				5D713EB02AE8FD6800B9E9B8 /* SecureDataProvider.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				5DD06FC62AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld in Sources */,
 				5DF8062A2AE812AC001CA7C9 /* LoginViewModel.swift in Sources */,
 				5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */,
+				5D713EB12AE8FD6800B9E9B8 /* SecureDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
