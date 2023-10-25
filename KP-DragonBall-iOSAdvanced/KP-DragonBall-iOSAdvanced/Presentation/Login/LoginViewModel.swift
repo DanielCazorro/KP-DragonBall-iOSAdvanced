@@ -7,10 +7,32 @@
 
 import Foundation
 
+import Foundation
+
 class LoginViewModel: LoginViewControllerDelegate {
+    // MARK: - Dependencies -
+    private let apiProvider: ApiProviderProtocol
+    private let secureDataProvider: SecureDataProviderProtocol
     
     // MARK: - Properties -
     var viewState: ((LoginViewState) -> Void)?
+    
+    // MARK: - Initializers -
+    init(apiProvider: ApiProviderProtocol,
+         securedataProvider: SecureDataProviderProtocol) {
+        self.apiProvider = apiProvider
+        self.secureDataProvider = securedataProvider
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(onLoginResponse),
+            name: NotificationCenter.apiLoginNotification,
+            object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     // MARK: - Public functions -
     func onLoginPressed(email: String?, password: String?) {
@@ -34,6 +56,20 @@ class LoginViewModel: LoginViewControllerDelegate {
                 password: password ?? "")
         }
     }
+    
+    
+    @objc func onLoginResponse(_ notification: Notification) {
+        // TODO: Parsear resultado qeu vendrá en notification.userInfo
+        guard let token = notification.userInfo?[NotificationCenter.tokenKey] as? String,
+        !token.isEmpty else {
+            return
+        }
+        
+        secureDataProvider.save(token: token)
+        viewState?(.loading(false))
+        viewState?(.navigateToNext)
+    }
+    
     private func isValid(email:String?) -> Bool {
         email?.isEmpty == false && email?.contains("@") ?? false
         
@@ -44,6 +80,6 @@ class LoginViewModel: LoginViewControllerDelegate {
     }
     
     private func doLoginWith(email: String, password: String) {
-        
+        apiProvider.login(for: email, with: password)
     }
 }
