@@ -19,6 +19,61 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9TQ-ZW-ho0">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="220" id="beU-TU-zCD">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beU-TU-zCD" id="RoH-rg-rDN">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-pQ-uAL">
+                                                    <rect key="frame" x="36" y="19" width="321" height="182"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S5S-xy-y5l">
+                                                            <rect key="frame" x="16" y="16" width="289" height="133"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgI-wM-s7J">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="169" height="133"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="fgI-wM-s7J" secondAttribute="height" multiplier="169:133" id="Uhv-8D-rcG"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86U-N3-QsF">
+                                                                    <rect key="frame" x="177" y="0.0" width="112" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59B-fp-OLl">
+                                                            <rect key="frame" x="16" y="8" width="289" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="59B-fp-OLl" firstAttribute="leading" secondItem="8Hl-pQ-uAL" secondAttribute="leading" constant="16" id="9xI-6e-Psg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="S5S-xy-y5l" secondAttribute="trailing" constant="16" id="CLB-0c-aWO"/>
+                                                        <constraint firstItem="59B-fp-OLl" firstAttribute="top" secondItem="8Hl-pQ-uAL" secondAttribute="top" constant="8" id="YgG-JC-KdJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="59B-fp-OLl" secondAttribute="trailing" constant="16" id="aDP-jn-8uT"/>
+                                                        <constraint firstItem="S5S-xy-y5l" firstAttribute="leading" secondItem="8Hl-pQ-uAL" secondAttribute="leading" constant="16" id="eX4-4Z-Sjb"/>
+                                                        <constraint firstItem="S5S-xy-y5l" firstAttribute="top" secondItem="59B-fp-OLl" secondAttribute="bottom" constant="8" id="vj6-ac-gZy"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Hl-pQ-uAL" firstAttribute="top" secondItem="RoH-rg-rDN" secondAttribute="topMargin" constant="8" id="VJM-L9-SQX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8Hl-pQ-uAL" secondAttribute="trailing" constant="16" id="rj5-zt-L0P"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8Hl-pQ-uAL" secondAttribute="bottom" constant="8" id="sky-pH-gpF"/>
+                                                <constraint firstItem="8Hl-pQ-uAL" firstAttribute="leading" secondItem="RoH-rg-rDN" secondAttribute="leadingMargin" constant="16" id="tPu-Mi-KhI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -36,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
