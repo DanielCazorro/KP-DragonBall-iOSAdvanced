@@ -13,7 +13,7 @@
 		5DD06FBC2AE6F84000AC3ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */; };
 		5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */; };
 		5DD06FC02AE6F84000AC3ECB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */; };
-		5DD06FC32AE6F84000AC3ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD06FC12AE6F84000AC3ECB /* Main.storyboard */; };
+		5DD06FC32AE6F84000AC3ECB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD06FC12AE6F84000AC3ECB /* Login.storyboard */; };
 		5DD06FC62AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FC42AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld */; };
 		5DD06FC82AE6F84100AC3ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DD06FC72AE6F84100AC3ECB /* Assets.xcassets */; };
 		5DD06FCB2AE6F84100AC3ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DD06FC92AE6F84100AC3ECB /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5DD06FC22AE6F84000AC3ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DD06FC22AE6F84000AC3ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		5DD06FC52AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KP_DragonBall_iOSAdvanced.xcdatamodel; sourceTree = "<group>"; };
 		5DD06FC72AE6F84100AC3ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DD06FCA2AE6F84100AC3ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,7 +139,6 @@
 		5DF8061A2AE808C4001CA7C9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5DD06FC12AE6F84000AC3ECB /* Main.storyboard */,
 				5DF806242AE80959001CA7C9 /* Launch */,
 				5DF806262AE8099D001CA7C9 /* Login */,
 			);
@@ -191,6 +190,7 @@
 		5DF806262AE8099D001CA7C9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5DD06FC12AE6F84000AC3ECB /* Login.storyboard */,
 				5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */,
 				5DF806292AE812AC001CA7C9 /* LoginViewModel.swift */,
 			);
@@ -309,7 +309,7 @@
 			files = (
 				5DD06FCB2AE6F84100AC3ECB /* LaunchScreen.storyboard in Resources */,
 				5DD06FC82AE6F84100AC3ECB /* Assets.xcassets in Resources */,
-				5DD06FC32AE6F84000AC3ECB /* Main.storyboard in Resources */,
+				5DD06FC32AE6F84000AC3ECB /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,12 +377,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5DD06FC12AE6F84000AC3ECB /* Main.storyboard */ = {
+		5DD06FC12AE6F84000AC3ECB /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5DD06FC22AE6F84000AC3ECB /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		5DD06FC92AE6F84100AC3ECB /* LaunchScreen.storyboard */ = {
@@ -527,7 +527,7 @@
 				INFOPLIST_FILE = "KP-DragonBall-iOSAdvanced/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,7 +555,7 @@
 				INFOPLIST_FILE = "KP-DragonBall-iOSAdvanced/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
