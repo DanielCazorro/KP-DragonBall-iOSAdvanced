@@ -31,9 +31,24 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
         0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        HeroCellView.estimateHeight
     }
-  
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HeroCellView.identifier,
+                                                       for: indexPath) as? HeroCellView else {
+            
+            return UITableViewCell()
+        }
+        
+        //TODO: Llamar a cell.update
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO: Navegar a detalle Hero
+    }
 }
 
