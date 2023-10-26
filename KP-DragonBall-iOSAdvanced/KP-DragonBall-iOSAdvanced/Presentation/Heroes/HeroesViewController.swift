@@ -15,7 +15,12 @@ class HeroesViewController: UIViewController {
         initViews()
     }
     
+    // MARK: - Private functions -
     private func initViews() {
+        tableView.register(
+            UINib(nibName: HeroCellView.identifier, bundle: nil),
+            forCellReuseIdentifier: HeroCellView.identifier)
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
