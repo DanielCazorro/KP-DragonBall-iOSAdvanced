@@ -16,6 +16,7 @@
 		5DA9958A2AE9AAAD007061BE /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA995892AE9AAAD007061BE /* HeroCellView.swift */; };
 		5DA995902AE9ACCE007061BE /* HeroCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA9958F2AE9ACCE007061BE /* HeroCellView.xib */; };
 		5DB959572AEBBFCC0080A4B5 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959562AEBBFCC0080A4B5 /* Hero.swift */; };
+		5DB9595A2AEBF2620080A4B5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB959592AEBF2620080A4B5 /* Kingfisher */; };
 		5DD06FBC2AE6F84000AC3ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */; };
 		5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */; };
 		5DD06FC02AE6F84000AC3ECB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */; };
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB9595A2AEBF2620080A4B5 /* Kingfisher in Frameworks */,
 				5D713EAA2AE8FCCA00B9E9B8 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +281,7 @@
 			name = "KP-DragonBall-iOSAdvanced";
 			packageProductDependencies = (
 				5D713EA92AE8FCCA00B9E9B8 /* KeychainSwift */,
+				5DB959592AEBF2620080A4B5 /* Kingfisher */,
 			);
 			productName = "KP-DragonBall-iOSAdvanced";
 			productReference = 5DD06FB82AE6F84000AC3ECB /* KP-DragonBall-iOSAdvanced.app */;
@@ -354,6 +357,7 @@
 			mainGroup = 5DD06FAF2AE6F84000AC3ECB;
 			packageReferences = (
 				5D713EA82AE8FCCA00B9E9B8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				5DB959582AEBF2610080A4B5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5DD06FB92AE6F84000AC3ECB /* Products */;
 			projectDirPath = "";
@@ -769,6 +773,14 @@
 				minimumVersion = 20.0.0;
 			};
 		};
+		5DB959582AEBF2610080A4B5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -776,6 +788,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5D713EA82AE8FCCA00B9E9B8 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		5DB959592AEBF2620080A4B5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB959582AEBF2610080A4B5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

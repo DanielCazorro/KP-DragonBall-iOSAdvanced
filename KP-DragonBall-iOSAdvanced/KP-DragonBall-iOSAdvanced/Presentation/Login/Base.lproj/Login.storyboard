@@ -105,11 +105,22 @@
                         <outlet property="loadingView" destination="rTN-mb-uqz" id="IBG-bl-3Wl"/>
                         <outlet property="passwordField" destination="wyk-CT-oor" id="UXx-5a-w7E"/>
                         <outlet property="passwordFieldError" destination="zdQ-FN-fw8" id="cEB-o5-3AA"/>
+                        <segue destination="5XT-d6-d4M" kind="show" identifier="LOGIN_TO_HEROE" id="Hus-Hh-clY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-60.305343511450381" y="-27.464788732394368"/>
+        </scene>
+        <!--Heroes-->
+        <scene sceneID="4uP-sb-MKr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Heroes" id="5XT-d6-d4M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cKp-uO-Yqx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goR-4e-nSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-27"/>
         </scene>
     </scenes>
     <resources>
@@ -117,13 +128,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
