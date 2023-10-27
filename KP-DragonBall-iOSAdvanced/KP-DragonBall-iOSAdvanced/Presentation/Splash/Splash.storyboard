@@ -19,17 +19,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo3" translatesAutoresizingMaskIntoConstraints="NO" id="xqy-8R-F6y">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-ul-75b">
+                                <rect key="frame" x="178" y="761" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="xqy-8R-F6y" secondAttribute="bottom" id="Jl7-nf-A0i"/>
+                            <constraint firstItem="Mfj-ul-75b" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NMd-ad-RET"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Mfj-ul-75b" secondAttribute="bottom" constant="20" id="NOe-Vf-9xo"/>
                             <constraint firstItem="xqy-8R-F6y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gac-dk-dd7"/>
                             <constraint firstItem="xqy-8R-F6y" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="i6d-PU-hmi"/>
                             <constraint firstItem="xqy-8R-F6y" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="os4-Pi-icA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loading" destination="Mfj-ul-75b" id="2tb-8n-rTB"/>
                         <segue destination="oNa-Od-uto" kind="show" identifier="SPLASH_TO_LOGIN" id="yuM-dl-jsQ"/>
                         <segue destination="yxz-Ll-9Ku" kind="show" identifier="SPLASH_TO_HEROES" id="Qka-dr-46d"/>
                     </connections>
