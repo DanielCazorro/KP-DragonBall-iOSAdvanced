@@ -14,6 +14,7 @@ extension NotificationCenter {
 
 protocol ApiProviderProtocol {
     func login(for user: String, with password: String)
+    func getHeroes(by name: String?, token: String, completion: ((String) -> Void)?)
 }
 
 class ApiProvider: ApiProviderProtocol {
@@ -22,6 +23,7 @@ class ApiProvider: ApiProviderProtocol {
     
     private enum Endpoint {
         static let login = "/auth/login"
+        static let heroes = "/heros/all"
     }
     
     // MARK: - ApiProviderProtocol -
@@ -63,5 +65,39 @@ class ApiProvider: ApiProviderProtocol {
                 userInfo: [NotificationCenter.tokenKey: responseData])
         } .resume()
     }
+    
+    func getHeroes(by name: String?, token: String, completion: ((String) -> Void)?) {
+        guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
+            return
+        }
+        
+        let jsonData: [String: Any] = ["name": name ?? ""]
+        let jsonParameters = try? JSONSerialization.data(withJSONObject: jsonData)
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        urlRequest.httpBody = jsonParameters
+        
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            guard error == nil else {
+                // TODO: Enviar notificación indicando el error
+                completion?("RESPONSE ERROR")
+                return
+            }
+            
+            guard let data,
+                  (response as? HTTPURLResponse)?.statusCode == 200 else {
+                // TODO: Enviar notificación indicando response error
+                completion?("DATA ERROR")
+                return
+            }
+            
+            completion?("RESPONSE")
+
+        } .resume()
+    }
 }
+
 

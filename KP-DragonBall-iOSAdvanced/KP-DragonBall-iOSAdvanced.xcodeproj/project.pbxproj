@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				5DF46B882AEA5A0900E3F4A4 /* HeroDAO.swift */,
-				5DF46B8C2AEA5BAD00E3F4A4 /* CoreDataStack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +210,7 @@
 			children = (
 				5DF46B872AEA59FD00E3F4A4 /* Models */,
 				5DD06FC42AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld */,
+				5DF46B8C2AEA5BAD00E3F4A4 /* CoreDataStack.swift */,
 				5D713EB02AE8FD6800B9E9B8 /* SecureDataProvider.swift */,
 			);
 			path = Local;
