@@ -17,6 +17,9 @@
 		5DA995902AE9ACCE007061BE /* HeroCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA9958F2AE9ACCE007061BE /* HeroCellView.xib */; };
 		5DB959572AEBBFCC0080A4B5 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959562AEBBFCC0080A4B5 /* Hero.swift */; };
 		5DB9595A2AEBF2620080A4B5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB959592AEBF2620080A4B5 /* Kingfisher */; };
+		5DB959672AEC154E0080A4B5 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB959662AEC154E0080A4B5 /* Splash.storyboard */; };
+		5DB959692AEC15590080A4B5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959682AEC15590080A4B5 /* SplashViewController.swift */; };
+		5DB9596B2AEC15620080A4B5 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9596A2AEC15620080A4B5 /* SplashViewModel.swift */; };
 		5DD06FBC2AE6F84000AC3ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */; };
 		5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */; };
 		5DD06FC02AE6F84000AC3ECB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */; };
@@ -58,6 +61,9 @@
 		5DA995892AE9AAAD007061BE /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		5DA9958F2AE9ACCE007061BE /* HeroCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCellView.xib; sourceTree = "<group>"; };
 		5DB959562AEBBFCC0080A4B5 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		5DB959662AEC154E0080A4B5 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		5DB959682AEC15590080A4B5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		5DB9596A2AEC15620080A4B5 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		5DD06FB82AE6F84000AC3ECB /* KP-DragonBall-iOSAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KP-DragonBall-iOSAdvanced.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5DB9595F2AEC15160080A4B5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				5DB959662AEC154E0080A4B5 /* Splash.storyboard */,
+				5DB959682AEC15590080A4B5 /* SplashViewController.swift */,
+				5DB9596A2AEC15620080A4B5 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		5DD06FAF2AE6F84000AC3ECB = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				5DF806242AE80959001CA7C9 /* Launch */,
+				5DB9595F2AEC15160080A4B5 /* Splash */,
 				5DF806262AE8099D001CA7C9 /* Login */,
 				5DA9957E2AE9A48C007061BE /* Heroes */,
 			);
@@ -380,6 +397,7 @@
 				5DD06FC82AE6F84100AC3ECB /* Assets.xcassets in Resources */,
 				5DA995802AE9A498007061BE /* Heroes.storyboard in Resources */,
 				5DD06FC32AE6F84000AC3ECB /* Login.storyboard in Resources */,
+				5DB959672AEC154E0080A4B5 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,11 +422,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB9596B2AEC15620080A4B5 /* SplashViewModel.swift in Sources */,
 				5DD06FC02AE6F84000AC3ECB /* LoginViewController.swift in Sources */,
 				5DD06FBC2AE6F84000AC3ECB /* AppDelegate.swift in Sources */,
 				5DA995822AE9A4A2007061BE /* HeroesViewController.swift in Sources */,
 				5DF46B8D2AEA5BAD00E3F4A4 /* CoreDataStack.swift in Sources */,
 				5DD06FC62AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld in Sources */,
+				5DB959692AEC15590080A4B5 /* SplashViewController.swift in Sources */,
 				5DA995842AE9A4AD007061BE /* HeroesViewModel.swift in Sources */,
 				5DF46B892AEA5A0900E3F4A4 /* HeroDAO.swift in Sources */,
 				5DF8062A2AE812AC001CA7C9 /* LoginViewModel.swift in Sources */,
