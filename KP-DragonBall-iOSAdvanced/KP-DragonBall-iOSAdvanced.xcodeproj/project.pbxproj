@@ -15,6 +15,7 @@
 		5DA995842AE9A4AD007061BE /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA995832AE9A4AD007061BE /* HeroesViewModel.swift */; };
 		5DA9958A2AE9AAAD007061BE /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA995892AE9AAAD007061BE /* HeroCellView.swift */; };
 		5DA995902AE9ACCE007061BE /* HeroCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA9958F2AE9ACCE007061BE /* HeroCellView.xib */; };
+		5DB959572AEBBFCC0080A4B5 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB959562AEBBFCC0080A4B5 /* Hero.swift */; };
 		5DD06FBC2AE6F84000AC3ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */; };
 		5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */; };
 		5DD06FC02AE6F84000AC3ECB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FBF2AE6F84000AC3ECB /* LoginViewController.swift */; };
@@ -55,6 +56,7 @@
 		5DA995832AE9A4AD007061BE /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		5DA995892AE9AAAD007061BE /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		5DA9958F2AE9ACCE007061BE /* HeroCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCellView.xib; sourceTree = "<group>"; };
+		5DB959562AEBBFCC0080A4B5 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		5DD06FB82AE6F84000AC3ECB /* KP-DragonBall-iOSAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KP-DragonBall-iOSAdvanced.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5DB959542AEBBFBC0080A4B5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5DB959552AEBBFC30080A4B5 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5DB959552AEBBFC30080A4B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DB959562AEBBFCC0080A4B5 /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5DD06FAF2AE6F84000AC3ECB = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +166,7 @@
 				5DD06FCC2AE6F84100AC3ECB /* Info.plist */,
 				5DF8061D2AE808D3001CA7C9 /* Resources */,
 				5DF8061E2AE808D8001CA7C9 /* Data */,
+				5DB959542AEBBFBC0080A4B5 /* Domain */,
 				5DF8061A2AE808C4001CA7C9 /* Presentation */,
 			);
 			path = "KP-DragonBall-iOSAdvanced";
@@ -392,6 +411,7 @@
 				5DA9958A2AE9AAAD007061BE /* HeroCellView.swift in Sources */,
 				5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */,
 				5D713EB52AE8FEC800B9E9B8 /* ApiProvider.swift in Sources */,
+				5DB959572AEBBFCC0080A4B5 /* Hero.swift in Sources */,
 				5D713EB12AE8FD6800B9E9B8 /* SecureDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
