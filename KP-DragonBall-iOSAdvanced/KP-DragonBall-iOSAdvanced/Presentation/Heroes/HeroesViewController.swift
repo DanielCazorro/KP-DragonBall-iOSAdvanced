@@ -10,8 +10,9 @@ import UIKit
 // MARK: - View Protocol -
 protocol HeroesViewControllerDelegate {
     var viewState: ((HeroesViewState) -> Void)? { get set }
-    
+    var heroesCount: Int { get }
     func onViewAppear()
+    func heroBy(index: Int) -> Hero?
 }
 
 // MARK: - Vies State -
@@ -64,7 +65,7 @@ class HeroesViewController: UIViewController {
 
 extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        viewModel?.heroesCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -78,7 +79,13 @@ extension HeroesViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        //TODO: Llamar a cell.update
+        if let hero = viewModel?.heroBy(index: indexPath.row) {
+            cell.updateView(
+                name: hero.name,
+                photo: hero.photo,
+                description: hero.description
+            )
+        }
         
         return cell
     }

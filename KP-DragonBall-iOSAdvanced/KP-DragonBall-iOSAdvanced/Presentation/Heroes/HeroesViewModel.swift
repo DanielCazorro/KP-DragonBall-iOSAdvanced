@@ -41,7 +41,10 @@ class HeroesViewModel: HeroesViewControllerDelegate {
     }
     
     func heroBy(index: Int) -> Hero? {
-        heroes[index]
+        if index >= 0 && index < heroesCount {
+            heroes[index]
+        } else {
+            nil
+        }
     }
-    
 }
