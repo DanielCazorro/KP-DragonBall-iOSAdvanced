@@ -52,7 +52,7 @@ class HeroesViewController: UIViewController {
             DispatchQueue.main.async {
                 switch state {
                 case .loading(let isLoading):
-                    break
+                    self?.loadingView.isHidden = !isLoading
                     
                 case .updateData:
                     self?.tableView.reloadData()
