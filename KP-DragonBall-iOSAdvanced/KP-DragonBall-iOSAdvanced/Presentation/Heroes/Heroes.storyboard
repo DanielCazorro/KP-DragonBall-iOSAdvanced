@@ -20,17 +20,35 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-rW-5dy">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Tn0-d4-VYd">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.7516475340136054" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Tn0-d4-VYd" firstAttribute="centerY" secondItem="iIf-rW-5dy" secondAttribute="centerY" id="Wuy-ta-nbP"/>
+                                    <constraint firstItem="Tn0-d4-VYd" firstAttribute="centerX" secondItem="iIf-rW-5dy" secondAttribute="centerX" id="XDE-T0-xYf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iIf-rW-5dy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4rp-No-ZVO"/>
+                            <constraint firstItem="iIf-rW-5dy" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="NgR-I9-1gB"/>
                             <constraint firstItem="9TQ-ZW-ho0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="PY9-wn-XlY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9TQ-ZW-ho0" secondAttribute="trailing" id="W4e-nc-Dbd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9TQ-ZW-ho0" secondAttribute="bottom" id="aen-jt-wxg"/>
+                            <constraint firstItem="iIf-rW-5dy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="rQf-he-zEz"/>
                             <constraint firstItem="9TQ-ZW-ho0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="udN-to-Emq"/>
+                            <constraint firstAttribute="bottom" secondItem="iIf-rW-5dy" secondAttribute="bottom" id="vbG-iy-hJT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="iIf-rW-5dy" id="onz-ey-94E"/>
                         <outlet property="tableView" destination="9TQ-ZW-ho0" id="KhT-p1-3dB"/>
                     </connections>
                 </viewController>
