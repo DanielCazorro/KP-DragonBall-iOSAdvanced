@@ -14,7 +14,7 @@ extension NotificationCenter {
 
 protocol ApiProviderProtocol {
     func login(for user: String, with password: String)
-    func getHeroes(by name: String?, token: String, completion: ((String) -> Void)?)
+    func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?)
 }
 
 class ApiProvider: ApiProviderProtocol {
@@ -66,7 +66,7 @@ class ApiProvider: ApiProviderProtocol {
         } .resume()
     }
     
-    func getHeroes(by name: String?, token: String, completion: ((String) -> Void)?) {
+    func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
             return
         }
@@ -83,18 +83,26 @@ class ApiProvider: ApiProviderProtocol {
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
                 // TODO: Enviar notificación indicando el error
-                completion?("RESPONSE ERROR")
+                completion?([])
                 return
             }
             
             guard let data,
                   (response as? HTTPURLResponse)?.statusCode == 200 else {
                 // TODO: Enviar notificación indicando response error
-                completion?("DATA ERROR")
+                completion?([])
                 return
             }
             
-            completion?("RESPONSE")
+            guard let heroes = try? JSONDecoder().decode(Heroes.self, from: data) else {
+                completion?([])
+                return
+            }
+            
+            print("API RESPONSE - GET HEROES: \(heroes)")
+            completion?(heroes)
+            
+            completion?([])
 
         } .resume()
     }
