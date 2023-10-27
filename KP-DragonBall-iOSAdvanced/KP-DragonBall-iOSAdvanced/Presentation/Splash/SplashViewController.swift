@@ -9,6 +9,8 @@ import UIKit
 
 protocol SplashViewControllerDelegate {
     var viewState: ((SplashViewState) -> Void)? { get set }
+    var loginViewModel: LoginViewControllerDelegate { get }
+    var heroesViewModel: HeroesViewControllerDelegate { get }
     
     func onViewAppear()
 }
@@ -33,10 +35,12 @@ class SplashViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "SPLASH_TO_LOGIN":
-            break
+            guard let loginViewController = segue.destination as? LoginViewController else { return }
+            loginViewController.viewModel = viewModel?.loginViewModel
             
         case "SPLASH_TO_HEROES":
-            break
+            guard let heroesViewController = segue.destination as? HeroesViewController else { return }
+            heroesViewController.viewModel = viewModel?.heroesViewModel
             
         default:
             break
