@@ -18,11 +18,9 @@ struct Hero: Codable {
         case isFavorite = "favorite"
     }
     
-    
     let id: String?
     let name: String?
     let description: String?
     let photo: String?
     let isFavorite: Bool?
-    
 }

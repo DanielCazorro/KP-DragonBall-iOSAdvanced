@@ -17,7 +17,7 @@ struct HeroLocation: Codable {
         case date = "dateShow"
         case hero
     }
-
+    
     let id: String?
     let latitude: String?
     let longitude: String?

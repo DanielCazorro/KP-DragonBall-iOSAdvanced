@@ -25,11 +25,17 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     var viewModel: SplashViewControllerDelegate?
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setObservers()
         viewModel?.onViewAppear()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,7 +65,6 @@ class SplashViewController: UIViewController {
                     
                 case .navigateToHeroes:
                     self?.performSegue(withIdentifier: "SPLASH_TO_HEROES", sender: nil)
-                    
                 }
             }
         }

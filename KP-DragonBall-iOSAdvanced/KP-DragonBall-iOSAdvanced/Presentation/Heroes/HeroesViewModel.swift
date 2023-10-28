@@ -17,7 +17,9 @@ class HeroesViewModel: HeroesViewControllerDelegate {
     var heroesCount: Int {
         heroes.count
     }
+    
     private var heroes: Heroes = []
+    
     
     // MARK: - Initializers -
     init(apiProvider: ApiProviderProtocol,
@@ -29,6 +31,7 @@ class HeroesViewModel: HeroesViewControllerDelegate {
     // MARK: - Public functions -
     func onViewAppear() {
         viewState?(.loading(true))
+        
         DispatchQueue.global().async {
             defer { self.viewState?(.loading(false)) }
             guard let token = self.secureDataProvider.getToken() else { return }
@@ -40,6 +43,7 @@ class HeroesViewModel: HeroesViewControllerDelegate {
             }
         }
     }
+    
     func heroBy(index: Int) -> Hero? {
         if index >= 0 && index < heroesCount {
             heroes[index]
@@ -54,6 +58,7 @@ class HeroesViewModel: HeroesViewControllerDelegate {
         return HeroDetailViewModel(
             hero: selectedHero,
             apiProvider: apiProvider,
-            secureDataProvider: secureDataProvider)
+            secureDataProvider: secureDataProvider
+        )
     }
 }

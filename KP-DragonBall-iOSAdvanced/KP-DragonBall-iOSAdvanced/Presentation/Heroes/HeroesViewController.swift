@@ -51,7 +51,6 @@ class HeroesViewController: UIViewController {
         heroDetailViewController.viewModel = detailViewModel
     }
     
-    
     // MARK: - Private functions -
     private func initViews() {
         tableView.register(

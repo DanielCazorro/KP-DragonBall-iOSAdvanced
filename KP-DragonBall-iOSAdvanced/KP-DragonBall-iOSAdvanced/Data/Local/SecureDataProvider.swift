@@ -27,5 +27,5 @@ final class SecureDataProvider: SecureDataProviderProtocol {
     func getToken() -> String? {
         keychain.get(Key.token)
     }
-    
 }
+
