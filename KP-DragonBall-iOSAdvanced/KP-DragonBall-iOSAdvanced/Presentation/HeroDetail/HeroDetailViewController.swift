@@ -26,6 +26,10 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var heroDescription: UITextView!
     
+    @IBAction func closeButtom() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     var viewModel: HeroDetailViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -43,7 +47,7 @@ class HeroDetailViewController: UIViewController {
         viewModel?.viewState = { [weak self] state in
             DispatchQueue.main.async {
                 switch state {
-                case .loading(let isLoading):
+                case .loading(_):
                     break
                     
                 case .update(let hero, let locations):

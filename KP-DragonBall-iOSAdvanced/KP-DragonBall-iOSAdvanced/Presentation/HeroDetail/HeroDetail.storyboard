@@ -48,10 +48,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTD-Sa-9tJ">
+                                <rect key="frame" x="8" y="67" width="40" height="32"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
+                                <connections>
+                                    <action selector="closeButtom" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gY2-HK-kBW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QsC-2p-C6B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bTD-Sa-9tJ" firstAttribute="leading" secondItem="QsC-2p-C6B" secondAttribute="leading" constant="8" id="3C8-VA-6Mn"/>
+                            <constraint firstItem="bTD-Sa-9tJ" firstAttribute="top" secondItem="QsC-2p-C6B" secondAttribute="top" constant="8" id="6V2-3V-uM9"/>
                             <constraint firstItem="Qhd-MM-CBP" firstAttribute="top" secondItem="gnf-66-2vs" secondAttribute="top" id="BbO-EV-Mrz"/>
                             <constraint firstItem="QsC-2p-C6B" firstAttribute="trailing" secondItem="1Oy-AS-KFc" secondAttribute="trailing" constant="16" id="E1o-zr-Nnr"/>
                             <constraint firstItem="Qhd-MM-CBP" firstAttribute="trailing" secondItem="QsC-2p-C6B" secondAttribute="trailing" id="Ily-Yc-9rh"/>
