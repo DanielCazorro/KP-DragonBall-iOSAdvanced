@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
 protocol HeroDetailViewControllerDelegate {
     var viewState: ((HeroDetailViewState) -> Void)? {get set}
@@ -46,9 +47,27 @@ class HeroDetailViewController: UIViewController {
                     break
                     
                 case .update(let hero, let locations):
-                    break
+                    self?.updateViews(hero: hero,
+                                      heroLocations: locations)
                 }
             }
         }
+    }
+    
+    private func updateViews(hero: Hero?, heroLocations: HeroLocations) {
+        photo.kf.setImage(with: URL(string: hero?.photo ?? ""))
+        makeRounded(image: photo)
+        
+        name.text = hero?.name
+        heroDescription.text = hero?.description
+    }
+    
+    // Function for image by David Jardón
+    private func makeRounded(image: UIImageView) {
+        image.layer.borderWidth = 1
+        image.layer.borderColor = UIColor.white.cgColor.copy(alpha: 0.6)
+        image.layer.cornerRadius = image.frame.height / 2
+        image.layer.masksToBounds = false
+        image.clipsToBounds = true
     }
 }
