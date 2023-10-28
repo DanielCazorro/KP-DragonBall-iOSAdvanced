@@ -16,7 +16,7 @@ protocol HeroDetailViewControllerDelegate {
 
 enum HeroDetailViewState {
     case loading(_ isLoading: Bool)
-    case update(hero: Hero?, locations: [String])
+    case update(hero: Hero?, locations: HeroLocations)
 }
 
 class HeroDetailViewController: UIViewController {
