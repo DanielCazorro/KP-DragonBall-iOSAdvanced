@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HeroDetailViewController" id="Y6W-OH-hqX" customClass="HeroDetailViewController" customModule="KP_DragonBall_iOSAdvanced" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gnf-66-2vs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhd-MM-CBP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="392"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qhd-MM-CBP" secondAttribute="height" multiplier="399:398" id="BFt-LI-VU9"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-tJ-mbr">
+                                <rect key="frame" x="273" y="288" width="104" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mY0-tJ-mbr" secondAttribute="height" multiplier="1:1" id="nPj-vb-aGJ"/>
+                                    <constraint firstAttribute="height" constant="104" id="wun-pL-gDC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcM-cB-5bE">
+                                <rect key="frame" x="16" y="412" width="361" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hhA-l1-Dih"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oy-AS-KFc">
+                                <rect key="frame" x="16" y="453" width="361" height="357"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QsC-2p-C6B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qhd-MM-CBP" firstAttribute="top" secondItem="gnf-66-2vs" secondAttribute="top" id="BbO-EV-Mrz"/>
+                            <constraint firstItem="QsC-2p-C6B" firstAttribute="trailing" secondItem="1Oy-AS-KFc" secondAttribute="trailing" constant="16" id="E1o-zr-Nnr"/>
+                            <constraint firstItem="Qhd-MM-CBP" firstAttribute="trailing" secondItem="QsC-2p-C6B" secondAttribute="trailing" id="Ily-Yc-9rh"/>
+                            <constraint firstItem="Qhd-MM-CBP" firstAttribute="leading" secondItem="gnf-66-2vs" secondAttribute="leading" id="OSh-gn-rDI"/>
+                            <constraint firstItem="QsC-2p-C6B" firstAttribute="trailing" secondItem="mcM-cB-5bE" secondAttribute="trailing" constant="16" id="R72-7t-Cdb"/>
+                            <constraint firstItem="1Oy-AS-KFc" firstAttribute="top" secondItem="mcM-cB-5bE" secondAttribute="bottom" constant="20" id="WXB-99-vga"/>
+                            <constraint firstItem="1Oy-AS-KFc" firstAttribute="leading" secondItem="QsC-2p-C6B" secondAttribute="leading" constant="16" id="eq0-gp-1dX"/>
+                            <constraint firstItem="1Oy-AS-KFc" firstAttribute="leading" secondItem="QsC-2p-C6B" secondAttribute="leading" constant="16" id="i9j-2h-osn"/>
+                            <constraint firstItem="QsC-2p-C6B" firstAttribute="trailing" secondItem="1Oy-AS-KFc" secondAttribute="trailing" constant="16" id="iBr-kS-JzZ"/>
+                            <constraint firstItem="mcM-cB-5bE" firstAttribute="top" secondItem="Qhd-MM-CBP" secondAttribute="bottom" constant="20" id="oxa-Ce-JxL"/>
+                            <constraint firstItem="QsC-2p-C6B" firstAttribute="bottom" secondItem="1Oy-AS-KFc" secondAttribute="bottom" constant="8" id="qFY-jd-naM"/>
+                            <constraint firstItem="QsC-2p-C6B" firstAttribute="trailing" secondItem="mY0-tJ-mbr" secondAttribute="trailing" constant="16" id="v0U-7I-AIr"/>
+                            <constraint firstItem="mcM-cB-5bE" firstAttribute="leading" secondItem="QsC-2p-C6B" secondAttribute="leading" constant="16" id="vf6-lL-Ool"/>
+                            <constraint firstItem="QsC-2p-C6B" firstAttribute="bottom" secondItem="1Oy-AS-KFc" secondAttribute="bottom" constant="8" id="xvA-c1-qlg"/>
+                            <constraint firstItem="mY0-tJ-mbr" firstAttribute="bottom" secondItem="Qhd-MM-CBP" secondAttribute="bottom" id="zDw-6X-cg2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroDescription" destination="1Oy-AS-KFc" id="rmw-3m-8pi"/>
+                        <outlet property="mapView" destination="Qhd-MM-CBP" id="Dj5-Lw-0or"/>
+                        <outlet property="name" destination="mcM-cB-5bE" id="9gv-mQ-Cb7"/>
+                        <outlet property="photo" destination="mY0-tJ-mbr" id="Tht-FF-Rtu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

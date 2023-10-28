@@ -30,6 +30,9 @@
 		5DD06FD62AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FD52AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedTests.swift */; };
 		5DD06FE02AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FDF2AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITests.swift */; };
 		5DD06FE22AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD06FE12AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITestsLaunchTests.swift */; };
+		5DDF9E672AECF364008D1F5A /* HeroDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF9E662AECF364008D1F5A /* HeroDetail.storyboard */; };
+		5DDF9E692AECF373008D1F5A /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E682AECF373008D1F5A /* HeroDetailViewController.swift */; };
+		5DDF9E6D2AECF3C3008D1F5A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */; };
 		5DF46B892AEA5A0900E3F4A4 /* HeroDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B882AEA5A0900E3F4A4 /* HeroDAO.swift */; };
 		5DF46B8D2AEA5BAD00E3F4A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B8C2AEA5BAD00E3F4A4 /* CoreDataStack.swift */; };
 		5DF8062A2AE812AC001CA7C9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF806292AE812AC001CA7C9 /* LoginViewModel.swift */; };
@@ -78,6 +81,9 @@
 		5DD06FDB2AE6F84200AC3ECB /* KP-DragonBall-iOSAdvancedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KP-DragonBall-iOSAdvancedUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD06FDF2AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KP_DragonBall_iOSAdvancedUITests.swift; sourceTree = "<group>"; };
 		5DD06FE12AE6F84200AC3ECB /* KP_DragonBall_iOSAdvancedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KP_DragonBall_iOSAdvancedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5DDF9E662AECF364008D1F5A /* HeroDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroDetail.storyboard; sourceTree = "<group>"; };
+		5DDF9E682AECF373008D1F5A /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		5DF46B882AEA5A0900E3F4A4 /* HeroDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAO.swift; sourceTree = "<group>"; };
 		5DF46B8C2AEA5BAD00E3F4A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5DF806292AE812AC001CA7C9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -207,6 +213,16 @@
 			path = "KP-DragonBall-iOSAdvancedUITests";
 			sourceTree = "<group>";
 		};
+		5DDF9E652AECF351008D1F5A /* HeroDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5DDF9E662AECF364008D1F5A /* HeroDetail.storyboard */,
+				5DDF9E682AECF373008D1F5A /* HeroDetailViewController.swift */,
+				5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */,
+			);
+			path = HeroDetail;
+			sourceTree = "<group>";
+		};
 		5DF46B872AEA59FD00E3F4A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +238,7 @@
 				5DB9595F2AEC15160080A4B5 /* Splash */,
 				5DF806262AE8099D001CA7C9 /* Login */,
 				5DA9957E2AE9A48C007061BE /* Heroes */,
+				5DDF9E652AECF351008D1F5A /* HeroDetail */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -395,6 +412,7 @@
 				5DD06FCB2AE6F84100AC3ECB /* LaunchScreen.storyboard in Resources */,
 				5DA995902AE9ACCE007061BE /* HeroCellView.xib in Resources */,
 				5DD06FC82AE6F84100AC3ECB /* Assets.xcassets in Resources */,
+				5DDF9E672AECF364008D1F5A /* HeroDetail.storyboard in Resources */,
 				5DA995802AE9A498007061BE /* Heroes.storyboard in Resources */,
 				5DD06FC32AE6F84000AC3ECB /* Login.storyboard in Resources */,
 				5DB959672AEC154E0080A4B5 /* Splash.storyboard in Resources */,
@@ -431,12 +449,14 @@
 				5DB959692AEC15590080A4B5 /* SplashViewController.swift in Sources */,
 				5DA995842AE9A4AD007061BE /* HeroesViewModel.swift in Sources */,
 				5DF46B892AEA5A0900E3F4A4 /* HeroDAO.swift in Sources */,
+				5DDF9E692AECF373008D1F5A /* HeroDetailViewController.swift in Sources */,
 				5DF8062A2AE812AC001CA7C9 /* LoginViewModel.swift in Sources */,
 				5DA9958A2AE9AAAD007061BE /* HeroCellView.swift in Sources */,
 				5DD06FBE2AE6F84000AC3ECB /* SceneDelegate.swift in Sources */,
 				5D713EB52AE8FEC800B9E9B8 /* ApiProvider.swift in Sources */,
 				5DB959572AEBBFCC0080A4B5 /* Hero.swift in Sources */,
 				5D713EB12AE8FD6800B9E9B8 /* SecureDataProvider.swift in Sources */,
+				5DDF9E6D2AECF3C3008D1F5A /* HeroDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
