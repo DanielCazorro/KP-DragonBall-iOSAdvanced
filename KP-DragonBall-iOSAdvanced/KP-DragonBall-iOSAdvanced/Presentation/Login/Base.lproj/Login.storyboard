@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="nEX-3h-FcV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KP-DragonBall-iOSAdvanced" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-DI-gjz">
                                 <rect key="frame" x="20" y="99" width="353" height="34.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="28"/>
@@ -24,8 +27,12 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IC-FQ-Zir">
                                 <rect key="frame" x="163.66666666666666" y="757.66666666666663" width="65.666666666666657" height="34.333333333333371"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Login">
-                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="systemMintColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <color key="baseForegroundColor" systemColor="systemMintColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onLoginPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hq9-wz-J9O"/>
@@ -85,8 +92,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nEX-3h-FcV" secondAttribute="bottom" id="672-vh-hhm"/>
                             <constraint firstItem="2IC-FQ-Zir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DHk-T8-zWB"/>
                             <constraint firstAttribute="trailing" secondItem="ibB-DI-gjz" secondAttribute="trailing" constant="20" id="Hta-Nm-uYQ"/>
+                            <constraint firstItem="nEX-3h-FcV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KkS-zN-CA1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ofb-ac-Tdh" secondAttribute="trailing" constant="26" id="P5V-Fr-H8S"/>
                             <constraint firstItem="rTN-mb-uqz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QXs-75-6aG"/>
                             <constraint firstItem="rTN-mb-uqz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RlI-Vu-QTb"/>
@@ -97,6 +106,8 @@
                             <constraint firstItem="ibB-DI-gjz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="f6p-LD-nwT"/>
                             <constraint firstItem="Ofb-ac-Tdh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="grh-Eh-A9R"/>
                             <constraint firstItem="Ofb-ac-Tdh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jaI-1d-6hd"/>
+                            <constraint firstItem="nEX-3h-FcV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wVo-7L-GTb"/>
+                            <constraint firstItem="nEX-3h-FcV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xug-0x-xe3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -124,11 +135,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fondo4" width="1116" height="1941"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
