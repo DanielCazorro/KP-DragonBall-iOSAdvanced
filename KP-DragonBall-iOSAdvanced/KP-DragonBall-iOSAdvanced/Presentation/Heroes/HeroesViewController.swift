@@ -14,6 +14,7 @@ protocol HeroesViewControllerDelegate {
     
     func onViewAppear()
     func heroBy(index: Int) -> Hero?
+    func heroDetailViewModel(index: Int) -> HeroDetailViewControllerDelegate?
 }
 
 // MARK: - View State -
@@ -37,6 +38,17 @@ class HeroesViewController: UIViewController {
         initViews()
         setObservers()
         viewModel?.onViewAppear()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "HEROES_TO_HERO_DETAIL",
+              let index = sender as? Int,
+              let heroDetailViewController = segue.destination as? HeroDetailViewController,
+              let detailViewModel = viewModel?.heroDetailViewModel(index: index) else {
+            return
+        }
+        
+        heroDetailViewController.viewModel = detailViewModel
     }
     
     

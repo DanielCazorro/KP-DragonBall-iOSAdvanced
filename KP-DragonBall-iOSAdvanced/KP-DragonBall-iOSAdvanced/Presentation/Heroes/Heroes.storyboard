@@ -50,11 +50,22 @@
                     <connections>
                         <outlet property="loadingView" destination="iIf-rW-5dy" id="onz-ey-94E"/>
                         <outlet property="tableView" destination="9TQ-ZW-ho0" id="KhT-p1-3dB"/>
+                        <segue destination="CF5-pY-dfC" kind="show" identifier="HEROES_TO_HERO_DETAIL" id="zXz-0v-noY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+        <!--HeroDetail-->
+        <scene sceneID="vct-s0-CRc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroDetail" id="CF5-pY-dfC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jrp-G6-gyf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqK-wf-M9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="-30"/>
         </scene>
     </scenes>
     <resources>

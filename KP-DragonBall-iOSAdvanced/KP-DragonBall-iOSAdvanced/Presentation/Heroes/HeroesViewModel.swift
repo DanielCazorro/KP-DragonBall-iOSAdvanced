@@ -47,4 +47,13 @@ class HeroesViewModel: HeroesViewControllerDelegate {
             nil
         }
     }
+    
+    func heroDetailViewModel(index: Int) -> HeroDetailViewControllerDelegate? {
+        guard let selectedHero = heroBy(index: index) else { return nil }
+        
+        return HeroDetailViewModel(
+            hero: selectedHero,
+            apiProvider: apiProvider,
+            secureDataProvider: secureDataProvider)
+    }
 }
