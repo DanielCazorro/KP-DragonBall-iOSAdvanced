@@ -188,8 +188,7 @@
 		5DD06FBA2AE6F84000AC3ECB /* KP-DragonBall-iOSAdvanced */ = {
 			isa = PBXGroup;
 			children = (
-				5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */,
-				5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */,
+				5DDF9E722AED0AA0008D1F5A /* Delegate(App+Scene) */,
 				5DD06FCC2AE6F84100AC3ECB /* Info.plist */,
 				5DF8061D2AE808D3001CA7C9 /* Resources */,
 				5DF8061E2AE808D8001CA7C9 /* Data */,
@@ -224,6 +223,15 @@
 				5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */,
 			);
 			path = HeroDetail;
+			sourceTree = "<group>";
+		};
+		5DDF9E722AED0AA0008D1F5A /* Delegate(App+Scene) */ = {
+			isa = PBXGroup;
+			children = (
+				5DD06FBB2AE6F84000AC3ECB /* AppDelegate.swift */,
+				5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */,
+			);
+			path = "Delegate(App+Scene)";
 			sourceTree = "<group>";
 		};
 		5DF46B872AEA59FD00E3F4A4 /* Models */ = {

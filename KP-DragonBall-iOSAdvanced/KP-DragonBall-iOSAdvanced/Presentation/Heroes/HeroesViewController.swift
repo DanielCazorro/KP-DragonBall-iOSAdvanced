@@ -28,8 +28,19 @@ class HeroesViewController: UIViewController {
     // MARK: - IBOutlet -
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var logOut: UIButton!
+    
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        secureDataProvider?.deleteToken()
+        
+        // Esto asume que tienes una vista de inicio de sesión llamada "LoginViewController" en tu storyboard.
+        if let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            navigationController?.setViewControllers([loginVC], animated: true)
+        }
+    }
     
     // MARK: - Public Properties -
+    var secureDataProvider: SecureDataProviderProtocol?
     var viewModel: HeroesViewControllerDelegate?
     
     // MARK: - Lifecycle -

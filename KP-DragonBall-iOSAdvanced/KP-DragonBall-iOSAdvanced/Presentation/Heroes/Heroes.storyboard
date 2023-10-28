@@ -20,6 +20,14 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pb-Ra-88e">
+                                <rect key="frame" x="154.33333333333334" y="708.66666666666663" width="84.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E3U-Fb-nrC"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQh-9G-xkz">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
@@ -38,7 +46,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gTs-WR-elp" firstAttribute="top" secondItem="Nce-Ao-s7G" secondAttribute="top" id="00v-ZH-Q0c"/>
+                            <constraint firstItem="2pb-Ra-88e" firstAttribute="centerY" secondItem="iGk-L4-FqD" secondAttribute="centerY" constant="300" id="33K-gW-dY2"/>
                             <constraint firstItem="BQh-9G-xkz" firstAttribute="top" secondItem="iGk-L4-FqD" secondAttribute="top" id="79F-dh-WWE"/>
+                            <constraint firstItem="2pb-Ra-88e" firstAttribute="centerX" secondItem="iGk-L4-FqD" secondAttribute="centerX" id="BZu-XC-skx"/>
                             <constraint firstItem="Nce-Ao-s7G" firstAttribute="trailing" secondItem="gTs-WR-elp" secondAttribute="trailing" id="BhA-jR-QcN"/>
                             <constraint firstItem="BQh-9G-xkz" firstAttribute="leading" secondItem="Nce-Ao-s7G" secondAttribute="leading" id="HtB-Rm-Lrv"/>
                             <constraint firstItem="gTs-WR-elp" firstAttribute="leading" secondItem="Nce-Ao-s7G" secondAttribute="leading" id="Vqc-Ol-k0R"/>
@@ -49,6 +59,7 @@
                     </view>
                     <connections>
                         <outlet property="loadingView" destination="BQh-9G-xkz" id="eVG-jg-PWY"/>
+                        <outlet property="logOut" destination="2pb-Ra-88e" id="8jw-Ju-oyi"/>
                         <outlet property="tableView" destination="gTs-WR-elp" id="gQ3-QA-U1t"/>
                         <segue destination="CF5-pY-dfC" kind="show" identifier="HEROES_TO_HERO_DETAIL" id="zXz-0v-noY"/>
                     </connections>
