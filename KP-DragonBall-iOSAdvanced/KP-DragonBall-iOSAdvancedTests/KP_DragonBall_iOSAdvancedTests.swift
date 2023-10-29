@@ -32,5 +32,50 @@ final class KP_DragonBall_iOSAdvancedTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+}
 
+class SecureDataProviderTests: XCTestCase {
+    var secureDataProvider: SecureDataProvider!
+
+    override func setUp() {
+        super.setUp()
+        secureDataProvider = SecureDataProvider()
+    }
+
+    override func tearDown() {
+        secureDataProvider = nil
+        super.tearDown()
+    }
+
+    func testSaveToken() {
+        let token = "mi_token_secreto"
+        secureDataProvider.save(token: token)
+
+        if let savedToken = secureDataProvider.getToken() {
+            XCTAssertEqual(savedToken, token, "El token guardado debe ser igual al token original")
+        } else {
+            XCTFail("No se pudo recuperar el token guardado")
+        }
+    }
+
+    func testGetToken() {
+        let token = "mi_token_secreto"
+        secureDataProvider.save(token: token)
+
+        if let savedToken = secureDataProvider.getToken() {
+            XCTAssertEqual(savedToken, token, "El token recuperado debe ser igual al token original")
+        } else {
+            XCTFail("No se pudo recuperar el token guardado")
+        }
+    }
+
+    func testDeleteToken() {
+        let token = "mi_token_secreto"
+        secureDataProvider.save(token: token)
+
+        // Elimina el token
+        secureDataProvider.deleteToken()
+
+        XCTAssertNil(secureDataProvider.getToken(), "El token debe haber sido eliminado y debe ser nulo")
+    }
 }
