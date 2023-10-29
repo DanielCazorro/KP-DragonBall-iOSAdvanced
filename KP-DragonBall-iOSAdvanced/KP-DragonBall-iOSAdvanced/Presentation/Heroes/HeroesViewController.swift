@@ -15,6 +15,7 @@ protocol HeroesViewControllerDelegate {
     func onViewAppear()
     func heroBy(index: Int) -> Hero?
     func heroDetailViewModel(index: Int) -> HeroDetailViewControllerDelegate?
+    func deleteToken()
 }
 
 // MARK: - View State -
@@ -31,7 +32,7 @@ class HeroesViewController: UIViewController {
     @IBOutlet weak var logOut: UIButton!
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
-        secureDataProvider?.deleteToken()
+        viewModel?.deleteToken()
         
         // Esto asume que tienes una vista de inicio de sesión llamada "LoginViewController" en tu storyboard.
         if let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
@@ -40,7 +41,6 @@ class HeroesViewController: UIViewController {
     }
     
     // MARK: - Public Properties -
-    var secureDataProvider: SecureDataProviderProtocol?
     var viewModel: HeroesViewControllerDelegate?
     
     // MARK: - Lifecycle -

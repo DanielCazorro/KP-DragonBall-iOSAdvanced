@@ -61,4 +61,8 @@ class HeroesViewModel: HeroesViewControllerDelegate {
             secureDataProvider: secureDataProvider
         )
     }
+    
+    func deleteToken() {
+        secureDataProvider.deleteToken()
+    }
 }
