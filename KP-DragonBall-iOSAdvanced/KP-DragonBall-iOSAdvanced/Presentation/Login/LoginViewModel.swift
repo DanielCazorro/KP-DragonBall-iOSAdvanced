@@ -36,6 +36,9 @@ class LoginViewModel: LoginViewControllerDelegate {
             name: NotificationCenter.apiLoginNotification,
             object: nil
         )
+        
+        // This remove the token when log out ¿?
+        secureDataProvider.deleteToken()
     }
     
     deinit {

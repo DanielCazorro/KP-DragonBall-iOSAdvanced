@@ -34,6 +34,7 @@
 		5DDF9E692AECF373008D1F5A /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E682AECF373008D1F5A /* HeroDetailViewController.swift */; };
 		5DDF9E6D2AECF3C3008D1F5A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */; };
 		5DDF9E712AECF8E8008D1F5A /* HeroLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E702AECF8E8008D1F5A /* HeroLocation.swift */; };
+		5DDF9E752AED264B008D1F5A /* MapNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E742AED264B008D1F5A /* MapNotes.swift */; };
 		5DF46B892AEA5A0900E3F4A4 /* HeroDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B882AEA5A0900E3F4A4 /* HeroDAO.swift */; };
 		5DF46B8D2AEA5BAD00E3F4A4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF46B8C2AEA5BAD00E3F4A4 /* CoreDataStack.swift */; };
 		5DF8062A2AE812AC001CA7C9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF806292AE812AC001CA7C9 /* LoginViewModel.swift */; };
@@ -86,6 +87,7 @@
 		5DDF9E682AECF373008D1F5A /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		5DDF9E702AECF8E8008D1F5A /* HeroLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocation.swift; sourceTree = "<group>"; };
+		5DDF9E742AED264B008D1F5A /* MapNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNotes.swift; sourceTree = "<group>"; };
 		5DF46B882AEA5A0900E3F4A4 /* HeroDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAO.swift; sourceTree = "<group>"; };
 		5DF46B8C2AEA5BAD00E3F4A4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5DF806292AE812AC001CA7C9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		5DDF9E652AECF351008D1F5A /* HeroDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5DDF9E732AED263F008D1F5A /* MapNotes */,
 				5DDF9E662AECF364008D1F5A /* HeroDetail.storyboard */,
 				5DDF9E682AECF373008D1F5A /* HeroDetailViewController.swift */,
 				5DDF9E6C2AECF3C3008D1F5A /* HeroDetailViewModel.swift */,
@@ -232,6 +235,14 @@
 				5DD06FBD2AE6F84000AC3ECB /* SceneDelegate.swift */,
 			);
 			path = "Delegate(App+Scene)";
+			sourceTree = "<group>";
+		};
+		5DDF9E732AED263F008D1F5A /* MapNotes */ = {
+			isa = PBXGroup;
+			children = (
+				5DDF9E742AED264B008D1F5A /* MapNotes.swift */,
+			);
+			path = MapNotes;
 			sourceTree = "<group>";
 		};
 		5DF46B872AEA59FD00E3F4A4 /* Models */ = {
@@ -459,6 +470,7 @@
 				5DD06FC62AE6F84000AC3ECB /* KP_DragonBall_iOSAdvanced.xcdatamodeld in Sources */,
 				5DB959692AEC15590080A4B5 /* SplashViewController.swift in Sources */,
 				5DA995842AE9A4AD007061BE /* HeroesViewModel.swift in Sources */,
+				5DDF9E752AED264B008D1F5A /* MapNotes.swift in Sources */,
 				5DF46B892AEA5A0900E3F4A4 /* HeroDAO.swift in Sources */,
 				5DDF9E692AECF373008D1F5A /* HeroDetailViewController.swift in Sources */,
 				5DF8062A2AE812AC001CA7C9 /* LoginViewModel.swift in Sources */,

@@ -64,8 +64,39 @@ class HeroDetailViewController: UIViewController {
         
         name.text = hero?.name
         heroDescription.text = hero?.description
+        
+        if let showPlace = heroLocations.first {
+            let latitudeLongitude = CLLocationCoordinate2D(
+                latitude: Double(showPlace.latitude!) ?? 0.0,
+                longitude: Double(showPlace.longitude!) ?? 0.0
+            )
+
+            showLocationHero(coordinate: latitudeLongitude)
+            
+            heroLocations.forEach {
+                mapView.addAnnotation(
+                    MapNotes(name: hero?.name,
+                             coordinate: .init(
+                                latitude: Double($0.latitude ?? "") ?? 0.0,
+                                longitude: Double($0.longitude ?? "") ?? 0.0),
+                             information: hero?.id
+                            )
+                )
+            }
+        }
     }
     
+    private func showLocationHero(coordinate: CLLocationCoordinate2D) {
+            let placeRadius: CLLocationDistance = 2000
+
+            let place = MKCoordinateRegion(
+                center: coordinate,
+                latitudinalMeters: placeRadius,
+                longitudinalMeters: placeRadius
+            )
+            mapView.setRegion(place, animated: true)
+        }
+
     // Function for image by David Jardón
     private func makeRounded(image: UIImageView) {
         image.layer.borderWidth = 1

@@ -8,6 +8,7 @@
 import UIKit
 
 // TODO: NEED TO FIX: LOGIN NOT WORKING
+// TODO: IF LOGIN FAIL -> REMOVE LOADING AGAIN
 
 // MARK: - View Protocol -
 protocol LoginViewControllerDelegate {
