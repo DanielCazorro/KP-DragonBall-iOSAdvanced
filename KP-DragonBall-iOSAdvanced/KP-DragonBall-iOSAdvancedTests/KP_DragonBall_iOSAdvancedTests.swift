@@ -80,6 +80,8 @@ class SecureDataProviderTests: XCTestCase {
     }
 }
 
+// MARK: - Validation Email and Password test -
+
 final class ValidationLoginTest: XCTestCase {
     private var sut: LoginViewModel!
     
@@ -116,4 +118,90 @@ final class ValidationLoginTest: XCTestCase {
         
         XCTAssertFalse(isbadEmail)
     }
+}
+
+
+// MARK: - ApiProviderTest -
+final class ApiProviderTest: XCTestCase {
+    
+    private var sut: ApiProviderProtocol!
+
+    override func setUp() {
+        sut = ApiDataMock(secureDataProvider: SecureDataProvider())
+    }
+    
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func test_api_login() throws {
+        let handler: (Notification) -> Bool = { notification in
+            let token = notification.userInfo?[NotificationCenter.tokenKey] as? String
+            XCTAssertNotNil(token)
+            XCTAssertNotEqual(token ?? "", "")
+
+            return true
+        }
+
+        let responseData = self.expectation(
+            forNotification: NotificationCenter.apiLoginNotification,
+            object: nil,
+            handler: handler
+        )
+
+        sut.login(for: "leinadhunter10@hotmail.com", with: "GokuFullPower")
+        wait(for: [responseData], timeout: 10.0)
+    }
+
+    func test_api_heroes() throws {
+        let responseData = self.expectation(description: "Fetch one hero data")
+
+        self.sut.getHeroes(by: nil, token: "") { heroes in
+            XCTAssertNotEqual(heroes.count, 0)
+            responseData.fulfill()
+        }
+
+        wait(for: [responseData], timeout: 10.0)
+    }
+
+    func test_get_hero_api() throws {
+        let responseData = self.expectation(description: "Fetch one hero data")
+        
+        let name = "Goku"
+        self.sut.getHeroes(by: name, token: "") { heroes in
+            XCTAssertEqual(heroes.count, 1)
+            XCTAssertEqual(heroes.first?.name ?? "", name)
+            responseData.fulfill()
+        }
+
+        wait(for: [responseData], timeout: 10.0)
+    }
+
+    func test_get_hero_api_not_exist() throws {
+        let responseData = self.expectation(description: "Fetch one hero data")
+
+        let name = "Thanos"
+        self.sut.getHeroes(by: name, token: "") { heroes in
+            XCTAssertEqual(heroes.count, 0)
+            responseData.fulfill()
+        }
+
+        wait(for: [responseData], timeout: 10.0)
+    }
+    
+    func test_api_locations() throws {
+        let responseData = self.expectation(description: "Fetch one location data")
+
+        self.sut.getLocations(by: nil, token: "") { locations in
+            XCTAssertNotEqual(locations.count, 0)
+            responseData.fulfill()
+        }
+
+        wait(for: [responseData], timeout: 10.0)
+    }
+
 }
