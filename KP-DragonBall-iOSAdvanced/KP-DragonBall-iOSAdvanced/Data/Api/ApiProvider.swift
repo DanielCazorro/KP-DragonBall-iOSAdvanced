@@ -31,13 +31,13 @@ class ApiProvider: ApiProviderProtocol {
     // MARK: - ApiProviderProtocol -
     func login(for user: String, with password: String) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.login)") else {
-            // TODO: Enviar notificación indicando el error
+            print("Invalid url")
             return
         }
         
         guard let loginData = String(format: "%@:%@",
                                      user, password).data(using: .utf8)?.base64EncodedString() else {
-            // TODO: Enviar notificación indicando el error
+            print("LoginData error")
             return
         }
         
@@ -48,18 +48,18 @@ class ApiProvider: ApiProviderProtocol {
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
-                // TODO: Enviar notificación indicando el error
+                print("Error: \(String(describing: error))")
                 return
             }
             
             guard let data,
                   (response as? HTTPURLResponse)?.statusCode == 200 else {
-                // TODO: Enviar notificación indicando response error
+                print("Error data: \(String(describing: data))")
                 return
             }
             
             guard let responseData = String(data: data, encoding: .utf8) else {
-                // TODO: Enviar notificación indicando response vacío
+                print("Error responseData empty")
                 return
             }
             
@@ -73,7 +73,7 @@ class ApiProvider: ApiProviderProtocol {
     
     func getHeroes(by name: String?, token: String, completion: ((Heroes) -> Void)?) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroes)") else {
-            // TODO: Enviar notificación indicando el error
+            print("Error getHeroes Heroes Endpoint")
             return
         }
         
@@ -90,20 +90,20 @@ class ApiProvider: ApiProviderProtocol {
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
-                // TODO: Enviar notificación indicando el error
+                print("Error: \(String(describing: error))")
                 completion?([])
                 return
             }
             
             guard let data,
                   (response as? HTTPURLResponse)?.statusCode == 200 else {
-                // TODO: Enviar notificación indicando response error
+                print("Error data: \(String(describing: data))")
                 completion?([])
                 return
             }
             
             guard let heroes = try? JSONDecoder().decode(Heroes.self, from: data) else {
-                // TODO: Enviar notificación indicando response error
+                print("Error heroes in GetHeroes")
                 completion?([])
                 return
             }
@@ -115,7 +115,7 @@ class ApiProvider: ApiProviderProtocol {
     
     func getLocations(by heroId: String?, token: String, completion: ((HeroLocations) -> Void)?) {
         guard let url = URL(string: "\(ApiProvider.apiBaseURL)\(Endpoint.heroLocations)") else {
-            // TODO: Enviar notificación indicando el error
+            print("Error getLocations")
             return
         }
         
@@ -132,20 +132,20 @@ class ApiProvider: ApiProviderProtocol {
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
-                // TODO: Enviar notificación indicando el error
+                print("Error: \(String(describing: error))")
                 completion?([])
                 return
             }
             
             guard let data,
                   (response as? HTTPURLResponse)?.statusCode == 200 else {
-                // TODO: Enviar notificación indicando response error
+                print("Error data: \(String(describing: data))")
                 completion?([])
                 return
             }
             
             guard let heroLocations = try? JSONDecoder().decode(HeroLocations.self, from: data) else {
-                // TODO: Enviar notificación indicando response error
+                print("Error heroLocations")
                 completion?([])
                 return
             }
